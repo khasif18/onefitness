@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+
+// ─── Logo config ───────────────────────────────────────────
+// Set this to true if your logo image already contains the brand name.
+// Set to false if it's just an icon/symbol and you want "OneFitness" text beside it.
+const LOGO_HAS_TEXT = false;
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -22,8 +28,20 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
         {/* Logo */}
-        <Link href="/" className="text-lg font-semibold tracking-tight text-white">
-          OneFitness
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src="/logo/onefitness-logo.png"
+            alt="OneFitness"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
+          {!LOGO_HAS_TEXT && (
+            <span className="text-lg font-semibold tracking-tight text-white">
+              OneFitness
+            </span>
+          )}
         </Link>
 
         {/* Desktop nav */}
