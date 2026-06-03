@@ -1,16 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image"; // ← Uncomment when real logo is ready
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-
-// ─── Logo config ───────────────────────────────────────────
-// Set this to true if your logo image already contains the brand name.
-// Set to false if it's just an icon/symbol and you want "OneFitness" text beside it.
-const LOGO_HAS_TEXT = false;
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -27,21 +22,42 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <Image
-            src="/logo/onefitness-logo.png"
-            alt="OneFitness"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
-            priority
-          />
-          {!LOGO_HAS_TEXT && (
-            <span className="text-lg font-semibold tracking-tight text-white">
-              OneFitness
-            </span>
-          )}
+
+        {/* ─── LOGO PLACEHOLDER ─────────────────────────────────
+            Replace this entire block with your real logo later:
+            
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image
+                src="/logo/onefitness-logo.png"
+                alt="OneFitness"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
+            </Link>
+        ────────────────────────────────────────────────────── */}
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 rounded-lg border border-dashed border-white/20 bg-white/5 px-4 py-2"
+        >
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-white/10">
+            <svg
+              className="h-5 w-5 text-slate-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"
+              />
+            </svg>
+          </div>
+          <span className="text-sm font-medium text-slate-400">Place Logo Here</span>
         </Link>
 
         {/* Desktop nav */}
