@@ -12,6 +12,7 @@ const navItems = [
   { href: "/plans", label: "Plans" },
   { href: "/trainers", label: "Trainers" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
 
