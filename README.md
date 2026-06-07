@@ -45,6 +45,7 @@ A modern, responsive gym website built with Next.js for marketing, trust-buildin
 | Day 4 | Trainers Page | ✅ Done | /trainers route, trainer cards grid, responsive layout, TrainerCard component |
 | Day 5 | Gallery Page | ✅ Done | /gallery route, GalleryGrid component, responsive image grid, category filter, gallery data file |
 | Day 6 | Testimonials Page | ✅ Done | /testimonials route, TestimonialCard, TestimonialsList, StarRating component, testimonials data file |
+| Day 7 | Contact Page | ✅ Done | /contact route, ContactForm, ContactInfoCard, WhatsAppCTA, GoogleMapEmbed, contact data file |
 
 ---
 
@@ -69,6 +70,12 @@ A modern, responsive gym website built with Next.js for marketing, trust-buildin
 - [x] Testimonials page (`/testimonials`) with 6 member reviews
 - [x] Reusable StarRating component
 - [x] Reusable TestimonialCard and TestimonialsList components
+- [x] Contact page (`/contact`) with form, info cards, WhatsApp, and Google Maps
+- [x] Reusable ContactForm component (controlled inputs, accessible labels)
+- [x] Reusable ContactInfoCard component
+- [x] WhatsAppCTA component (click-to-chat)
+- [x] GoogleMapEmbed component (responsive iframe)
+- [x] Contact data file for centralized business info
 - [x] Placeholder system for missing assets (logo, hero images, trainer photos, gallery)
 - [x] Dark premium gym aesthetic throughout
 - [x] Mobile-first responsive design on all pages
@@ -82,10 +89,6 @@ A modern, responsive gym website built with Next.js for marketing, trust-buildin
 
 ### Not Started
 
-- [ ] Contact page
-- [ ] Contact form handling
-- [ ] WhatsApp integration
-- [ ] Google Maps embed
 - [ ] Favicon and metadata/SEO optimization
 - [ ] Analytics integration
 - [ ] Final QA and polish
@@ -105,6 +108,8 @@ onefitness/
 │   │   └── page.tsx            # Trainers page
 │   ├── testimonials/
 │   │   └── page.tsx            # Testimonials page
+│   ├── contact/
+│   │   └── page.tsx            # Contact page
 │   └── gallery/
 │       ├── layout.tsx          # Gallery metadata
 │       └── page.tsx            # Gallery page with filter
@@ -119,10 +124,15 @@ onefitness/
 │   ├── GalleryGrid.tsx         # Reusable gallery image grid
 │   ├── StarRating.tsx          # Reusable star rating (1-5)
 │   ├── TestimonialCard.tsx     # Single testimonial card
-│   └── TestimonialsList.tsx    # Testimonials grid wrapper
+│   ├── TestimonialsList.tsx    # Testimonials grid wrapper
+│   ├── ContactForm.tsx         # Contact form (controlled inputs)
+│   ├── ContactInfoCard.tsx     # Reusable contact info block
+│   ├── WhatsAppCTA.tsx         # WhatsApp click-to-chat button
+│   └── GoogleMapEmbed.tsx      # Google Maps responsive embed
 ├── data/
 │   ├── gallery.ts              # Gallery image data array
-│   └── testimonials.ts         # Testimonials data array
+│   ├── testimonials.ts         # Testimonials data array
+│   └── contact.ts              # Contact/business info
 ├── lib/
 │   └── utils.ts                # Utility functions (cn helper)
 ├── public/
@@ -181,6 +191,7 @@ npm start
 | `/trainers` | Trainers | 4 trainer profile cards |
 | `/gallery` | Gallery | Filterable image grid |
 | `/testimonials` | Testimonials | Member reviews with star ratings |
+| `/contact` | Contact | Form, info cards, WhatsApp, Google Maps |
 
 ---
 
