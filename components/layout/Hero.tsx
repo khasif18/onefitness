@@ -1,109 +1,122 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-// ─── REPLACE THESE WITH REAL IMAGE PATHS LATER ───────────────
-// When you have real images, change this array to:
-//   import Image from "next/image";
-//   const images = [
-//     "/images/hero/hero-1.jpg",
-//     "/images/hero/hero-2.jpg",
-//     "/images/hero/hero-3.jpg",
-//   ];
-// Then swap the placeholder <div> below with <Image> components.
-// ──────────────────────────────────────────────────────────────
-
-const placeholderSlides = [
-  { id: 1, bg: "bg-slate-800" },
-  { id: 2, bg: "bg-slate-700" },
-  { id: 3, bg: "bg-slate-800" },
+// ─── Hero slide images ──────────────────────────────────────
+// Edit this array to add, remove, or reorder hero slides.
+// Images are stored in: public/hero/
+const HERO_IMAGES = [
+  "/hero/hero-1.jpg",
+  "/hero/hero-2.jpg",
+  "/hero/hero-3.jpg",
 ];
+
+// How often slides change (in milliseconds)
+const SLIDE_INTERVAL = 3000;
+
+// Single hero image with error fallback
+function HeroImage({
+  src,
+  isActive,
+  isPriority,
+}: {
+  src: string;
+  isActive: boolean;
+  isPriority: boolean;
+}) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) return null; // Hide broken images — dark bg shows through
+
+  return (
+    <Image
+      src={src}
+      alt=""
+      fill
+      sizes="100vw"
+      quality={80}
+      priority={isPriority}
+      loading={isPriority ? "eager" : "lazy"}
+      onError={() => setFailed(true)}
+      className={`object-cover object-center transition-opacity duration-[1500ms] ease-in-out ${
+        isActive ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  );
+}
 
 export function Hero() {
   const [active, setActive] = useState(0);
 
-  // Switch to the next slide every 3 seconds (3000 milliseconds)
+  // Auto-advance to next slide every SLIDE_INTERVAL ms
   useEffect(() => {
     const timer = setInterval(() => {
-      setActive((i) => (i + 1) % placeholderSlides.length);
-    }, 3000);
+      setActive((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, SLIDE_INTERVAL);
+
+    // Cleanup: stop the timer when component unmounts
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative h-[90vh] min-h-[600px] overflow-hidden">
-
-      {/* LAYER 1: Background placeholder slides */}
-      {placeholderSlides.map((slide, index) => (
-        <div
-          key={slide.id}
-          aria-hidden="true"
-          className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-[1500ms] ease-in-out ${
-            slide.bg
-          } ${index === active ? "opacity-100" : "opacity-0"}`}
-        >
-          {/* Placeholder indicator (only visible until real images are added) */}
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-dashed border-white/15 bg-white/5 px-8 py-6">
-            <svg
-              className="h-10 w-10 text-slate-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={1}
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"
-              />
-            </svg>
-            <p className="text-sm font-medium text-slate-400">
-              BG Images will run here
-            </p>
-            <p className="text-xs text-slate-500">
-              Background images will change every 3 seconds
-            </p>
-            <p className="mt-1 text-xs text-slate-600">
-              Slide {slide.id} of {placeholderSlides.length}
-            </p>
-          </div>
-        </div>
+    <section className="relative h-[85vh] min-h-[500px] overflow-hidden bg-slate-900 sm:h-[90vh] sm:min-h-[600px]">
+      {/* Background images — stacked, one visible at a time */}
+      {HERO_IMAGES.map((src, index) => (
+        <HeroImage
+          key={src}
+          src={src}
+          isActive={index === active}
+          isPriority={index === 0}
+        />
       ))}
 
-      {/* LAYER 2: Dark overlay (keeps hero text readable) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-slate-950" />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-slate-950" />
+      {/* Extra left-side overlay to protect text area from bright spots */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
 
-      {/* LAYER 3: Hero content (always visible above everything) */}
+      {/* Slide indicators */}
+      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2 sm:bottom-8">
+        {HERO_IMAGES.map((_, index) => (
+          <span
+            key={index}
+            className={`block h-1.5 rounded-full transition-all duration-500 ${
+              index === active
+                ? "w-8 bg-primary"
+                : "w-1.5 bg-white/30"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Hero content — always visible above everything */}
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
-          <div className="max-w-2xl space-y-6">
-            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+          <div className="max-w-2xl space-y-4 sm:space-y-6">
+            <p className="text-xs font-medium uppercase tracking-widest text-primary sm:text-sm">
               Transform Your Body
             </p>
 
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
               Your Fitness Journey{" "}
               <span className="text-primary">Starts Here</span>
             </h1>
 
-            <p className="max-w-xl text-lg leading-8 text-slate-200">
+            <p className="max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
               Join OneFitness and get access to world-class equipment,
               expert trainers, and a community that pushes you to be your best.
             </p>
 
-            <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-              <Button asChild size="lg" className="rounded-full px-8">
+            <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:gap-4">
+              <Button asChild size="lg" className="w-full rounded-full px-8 sm:w-auto">
                 <Link href="/plans">View Plans</Link>
               </Button>
-              <a
-                href="#about"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition hover:border-white/30 hover:bg-white/20"
-              >
-                Learn More
-              </a>
+              <Button asChild variant="outline" size="lg" className="w-full rounded-full px-8 sm:w-auto">
+                <Link href="/contact">Contact Us</Link>
+              </Button>
             </div>
           </div>
         </div>
