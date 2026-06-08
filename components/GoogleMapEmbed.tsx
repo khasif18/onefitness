@@ -14,7 +14,7 @@
 // ──────────────────────────────────────────────────────────────
 
 const MAP_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.5!2d83.395!3d18.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3be2c1a0000001%3A0x1!2sVizianagaram%2C+Andhra+Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
+  "https://maps.google.com/maps?q=1-7-2+Boggula+Dibba+Rd,+Alakananda+Colony,+Vizianagaram+Cantonment,+Vizianagaram,+Andhra+Pradesh+535003&t=&z=17&ie=UTF8&iwloc=&output=embed";
 
 export function GoogleMapEmbed() {
   return (
