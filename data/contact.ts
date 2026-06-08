@@ -4,11 +4,11 @@
 // ──────────────────────────────────────────────────────────────
 
 export const contactInfo = {
-  phone: "+919876543210",
-  phoneDisplay: "+91 98765 43210",
+  phone: "+918919767483",
+  phoneDisplay: "+91 89197 67483",
   email: "onefitness@example.com",
-  address: "OneFitness Gym, Rasapūdipalem, Visakhapatnam, Andhra Pradesh, India",
+  address: "1st Floor, Four Square Apartment, RnB Junction, Beside Indian Overseas Bank, Opposite RCM Church Road, Boggula Dibba Area, Vizianagaram",
   hours: "Mon – Sat: 5:00 AM – 10:00 PM | Sun: 6:00 AM – 12:00 PM",
-  whatsappNumber: "919876543210",
+  whatsappNumber: "918919767483",
   whatsappMessage: "Hi OneFitness, I want to know about membership plans.",
 };

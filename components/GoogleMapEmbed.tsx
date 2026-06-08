@@ -15,7 +15,7 @@ export function GoogleMapEmbed() {
       <div>
         <h2 className="text-xl font-semibold text-white">Find Us</h2>
         <p className="mt-1 text-sm text-slate-400">
-          Visit our gym in Rasapūdipalem, Visakhapatnam
+          Visit our gym in Boggula Dibba Area, Vizianagaram
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export function GoogleMapEmbed() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="OneFitness Gym Location - Rasapūdipalem, Visakhapatnam"
+          title="OneFitness Gym Location - Boggula Dibba Area, Vizianagaram"
         />
       </div>
     </div>
