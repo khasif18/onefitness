@@ -4,11 +4,13 @@
 // ──────────────────────────────────────────────────────────────
 
 export const contactInfo = {
+  gymName: "One Fitness",
   phone: "+918919767483",
   phoneDisplay: "+91 89197 67483",
   email: "onefitness@example.com",
-  address: "1st Floor, Four Square Apartment, RnB Junction, Beside Indian Overseas Bank, Opposite RCM Church Road, Boggula Dibba Area, Vizianagaram",
-  hours: "Mon – Sat: 5:00 AM – 10:00 PM | Sun: 6:00 AM – 12:00 PM",
+  address:
+    "1st Floor, Four Square Apartment, RnB Junction, Beside Indian Overseas Bank, Opposite RCM Church Road, Boggula Dibba Area, Vizianagaram, Andhra Pradesh",
+  hours: "Open until 10:00 PM",
   whatsappNumber: "918919767483",
-  whatsappMessage: "Hi OneFitness, I want to know about membership plans.",
+  whatsappMessage: "Hi One Fitness, I want to know about membership plans.",
 };
