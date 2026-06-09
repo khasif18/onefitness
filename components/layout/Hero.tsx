@@ -96,13 +96,13 @@ export function Hero() {
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="max-w-2xl space-y-4 sm:space-y-6">
-            <p className="text-xs font-medium uppercase tracking-widest text-primary sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-white/90 sm:text-sm">
               Transform Your Body
             </p>
 
             <h1 className="text-3xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
               Your Fitness Journey{" "}
-              <span className="text-primary">Starts Here</span>
+              <span className="text-yellow-400">Starts Here</span>
             </h1>
 
             <p className="max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
