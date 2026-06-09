@@ -114,9 +114,12 @@ export function Hero() {
               <Button asChild size="lg" className="w-full rounded-full px-8 sm:w-auto">
                 <Link href="/plans">View Plans</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="w-full rounded-full border-white/30 bg-white/10 px-8 text-white backdrop-blur-sm hover:bg-white/20 hover:border-white/50 sm:w-auto">
-                <Link href="/contact">Contact Us</Link>
-              </Button>
+              <Link
+                href="/contact"
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-medium text-white backdrop-blur-sm transition hover:border-white/50 hover:bg-white/20 sm:w-auto"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
