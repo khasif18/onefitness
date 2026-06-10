@@ -1,7 +1,4 @@
-// ─── Contact data ──────────────────────────────────────────
-// Replace placeholder values with real business info when ready.
-// This file is used by the Contact page and related components.
-// ──────────────────────────────────────────────────────────────
+// Contact info used across the site.
 
 export const contactInfo = {
   gymName: "One Fitness",

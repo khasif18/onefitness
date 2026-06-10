@@ -5,9 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-// ─── Hero slide images ──────────────────────────────────────
-// Edit this array to add, remove, or reorder hero slides.
-// Images are stored in: public/hero/
+// Hero slide images stored in public/hero/
 const HERO_IMAGES = [
   "/hero/hero-1.jpg",
   "/hero/hero-2.jpg",

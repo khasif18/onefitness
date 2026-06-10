@@ -1,4 +1,4 @@
-// import Image from "next/image"; // ← Uncomment when real trainer photos are ready
+// import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
@@ -11,8 +11,7 @@ export const metadata: Metadata = {
     "Meet the certified trainers at One Fitness Vizianagaram. Specialists in strength, HIIT, yoga, and body transformation — ready to guide your fitness journey.",
 };
 
-// ─── Trainer data ──────────────────────────────────────────
-// Save trainer photos to: public/images/trainers/
+// Trainer data
 const trainers = [
   {
     id: 1,
@@ -97,7 +96,6 @@ export default function TrainersPage() {
                       d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                     />
                   </svg>
-                  <span className="text-xs text-slate-500">Trainer Image</span>
                 </div>
                 {/* Bottom gradient */}
                 <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-slate-900/80 to-transparent" />

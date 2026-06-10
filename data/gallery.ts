@@ -1,21 +1,4 @@
-// ─── Gallery image data ────────────────────────────────────
-// Currently using placeholder images from placehold.co
-//
-// WHEN YOU HAVE REAL PHOTOS, replace each src with a local path:
-//   src: "/images/gallery/gym-1.jpg"
-//
-// Save real photos to: public/images/gallery/
-//
-// Files you need to replace:
-//   1. gym-1.jpg          → Main gym floor / free weights area
-//   2. gym-2.jpg          → Cardio zone with treadmills
-//   3. equipment-1.jpg    → Cable machine station
-//   4. equipment-2.jpg    → Squat racks and barbells
-//   5. members-1.jpg      → Group fitness class
-//   6. members-2.jpg      → Personal training session
-//   7. transformation-1.jpg → Member progress (12-week)
-//   8. transformation-2.jpg → Before and after photo
-// ──────────────────────────────────────────────────────────────
+// Gallery images. Update src paths when real photos are added to public/images/gallery/
 
 export type GalleryImage = {
   id: number;

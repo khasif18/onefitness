@@ -19,7 +19,6 @@ export function ContactForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: Connect to backend or email service later
     console.log("Form submitted:", form);
   }
 

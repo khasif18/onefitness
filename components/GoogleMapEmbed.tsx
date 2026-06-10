@@ -1,17 +1,4 @@
-// ─── Google Maps Embed ──────────────────────────────────────
-// This must be an EMBED URL (from "Share > Embed a map"), NOT a normal maps link.
-// To get the correct URL:
-//   1. Go to Google Maps → search for your gym location
-//   2. Click "Share" → "Embed a map"
-//   3. Copy ONLY the src="..." value from the iframe code
-//
-// A valid embed URL starts with:
-//   https://www.google.com/maps/embed?pb=...
-//
-// A normal maps link (WILL NOT WORK in iframe):
-//   https://www.google.com/maps/place/...
-//   https://maps.google.com/...
-// ──────────────────────────────────────────────────────────────
+// Google Maps embed for the gym location.
 
 const MAP_EMBED_URL =
   "https://maps.google.com/maps?q=1-7-2+Boggula+Dibba+Rd,+Alakananda+Colony,+Vizianagaram+Cantonment,+Vizianagaram,+Andhra+Pradesh+535003&t=&z=17&ie=UTF8&iwloc=&output=embed";

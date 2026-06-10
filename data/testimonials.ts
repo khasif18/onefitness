@@ -1,8 +1,4 @@
-// ─── Testimonials data ─────────────────────────────────────
-// Replace placeholder quotes with real member testimonials later.
-// Optional member photos go in: public/images/testimonials/
-// Example: public/images/testimonials/member-1.jpg → image: "/images/testimonials/member-1.jpg"
-// ──────────────────────────────────────────────────────────────
+// Member testimonials data.
 
 export type Testimonial = {
   id: number;
