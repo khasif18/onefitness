@@ -22,6 +22,13 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl">
+      {/* Skip to content link — visible only on focus for keyboard users */}
+      <a
+        href="#main-content"
+        className="absolute left-4 top-4 z-50 -translate-y-16 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition focus:translate-y-0"
+      >
+        Skip to content
+      </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
 
         {/* Logo — icon-only, so brand name text is shown beside it */}

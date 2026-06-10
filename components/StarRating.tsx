@@ -4,7 +4,7 @@ type StarRatingProps = {
 
 export function StarRating({ rating }: StarRatingProps) {
   return (
-    <div className="flex gap-0.5">
+    <div className="flex gap-0.5" role="img" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }, (_, i) => (
         <svg
           key={i}

@@ -62,7 +62,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[85vh] min-h-[500px] overflow-hidden bg-slate-900 sm:h-[90vh] sm:min-h-[600px]">
+    <section className="relative h-[85vh] min-h-[500px] overflow-hidden bg-slate-900 sm:h-[90vh] sm:min-h-[600px]" aria-label="Hero banner showcasing One Fitness gym">
       {/* Background images — stacked, one visible at a time */}
       {HERO_IMAGES.map((src, index) => (
         <HeroImage

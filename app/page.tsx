@@ -77,6 +77,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
+      <main id="main-content">
       <Hero />
 
       {/* ═══ WHY CHOOSE US ═══ */}
@@ -269,6 +270,7 @@ export default function Home() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

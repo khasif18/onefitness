@@ -51,6 +51,7 @@ export default function GalleryPage() {
                 key={cat}
                 type="button"
                 onClick={() => setActive(cat)}
+                aria-pressed={active === cat}
                 className={cn(
                   "rounded-full px-4 py-2 text-sm font-medium capitalize transition",
                   active === cat
