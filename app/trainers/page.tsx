@@ -113,7 +113,7 @@ export default function TrainersPage() {
                 </p>
 
                 {/* Meta row */}
-                <div className="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
                   <span className="rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">
                     {trainer.specialization}
                   </span>
