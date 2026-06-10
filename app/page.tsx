@@ -250,7 +250,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="w-full rounded-full px-8 sm:w-auto">
-              <Link href="/contact">Join Now</Link>
+              <Link href="/contact">Get in Touch</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="w-full rounded-full px-8 sm:w-auto">
               <Link href="/plans">View Plans</Link>

@@ -63,7 +63,7 @@ export function Navbar() {
 
           {/* CTA */}
           <Button asChild size="sm" className="rounded-full px-5">
-            <Link href="/plans">Join Now</Link>
+            <Link href="/plans">View Plans</Link>
           </Button>
         </nav>
 
@@ -113,7 +113,7 @@ export function Navbar() {
             <li>
               <Button asChild size="sm" className="mt-2 w-full rounded-full">
                 <Link href="/plans" onClick={() => setMobileOpen(false)}>
-                  Join Now
+                  View Plans
                 </Link>
               </Button>
             </li>
