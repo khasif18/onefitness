@@ -1,8 +1,15 @@
 // import Image from "next/image"; // ← Uncomment when real trainer photos are ready
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Our Trainers",
+  description:
+    "Meet the certified trainers at One Fitness Vizianagaram. Specialists in strength, HIIT, yoga, and body transformation — ready to guide your fitness journey.",
+};
 
 // ─── Trainer data ──────────────────────────────────────────
 // Save trainer photos to: public/images/trainers/

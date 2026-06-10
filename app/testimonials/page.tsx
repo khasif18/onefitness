@@ -5,7 +5,9 @@ import { TestimonialsList } from "@/components/TestimonialsList";
 import { testimonials } from "@/data/testimonials";
 
 export const metadata: Metadata = {
-  title: "Testimonials | OneFitness",
+  title: "Testimonials",
+  description:
+    "Read real reviews from One Fitness members in Vizianagaram. See how our trainers and community have helped members lose weight, gain muscle, and transform their lives.",
 };
 
 export default function TestimonialsPage() {

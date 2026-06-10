@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -7,6 +8,12 @@ import { StarRating } from "@/components/StarRating";
 import { SectionHeader } from "@/components/SectionHeader";
 import { contactInfo } from "@/data/contact";
 import { testimonials } from "@/data/testimonials";
+
+export const metadata: Metadata = {
+  title: "One Fitness | Premium Gym in Vizianagaram",
+  description:
+    "Transform your body at One Fitness — Vizianagaram's premium strength and transformation gym. Expert trainers, world-class equipment, flexible plans, and a supportive community.",
+};
 
 // ─── Why Choose Us data ────────────────────────────────────
 const reasons = [

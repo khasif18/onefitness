@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Membership Plans",
+  description:
+    "Explore One Fitness membership plans — Basic, Standard, and Premium. No contracts, cancel anytime. Find the perfect plan for your fitness goals in Vizianagaram.",
+};
 import {
   Card,
   CardHeader,

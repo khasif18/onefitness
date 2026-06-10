@@ -8,7 +8,9 @@ import { GoogleMapEmbed } from "@/components/GoogleMapEmbed";
 import { contactInfo } from "@/data/contact";
 
 export const metadata: Metadata = {
-  title: "Contact | OneFitness",
+  title: "Contact Us",
+  description:
+    "Get in touch with One Fitness Vizianagaram. Visit us at Boggula Dibba, call, WhatsApp, or send a message. Open until 10 PM daily.",
 };
 
 export default function ContactPage() {
