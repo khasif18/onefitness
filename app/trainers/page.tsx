@@ -132,7 +132,7 @@ export default function TrainersPage() {
                   size="sm"
                   className="mt-4 w-full rounded-full"
                 >
-                  <Link href="/plans">Train With Me</Link>
+                  <Link href="/contact">Train With Me</Link>
                 </Button>
               </div>
             </div>
