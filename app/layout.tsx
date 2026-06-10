@@ -16,8 +16,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OneFitness | Gym Marketing",
-  description: "A clean Next.js marketing foundation for freelance gym brands.",
+  metadataBase: new URL("https://onefitness-eight.vercel.app"),
+  title: {
+    default: "One Fitness | Premium Gym in Vizianagaram",
+    template: "%s | One Fitness",
+  },
+  description:
+    "One Fitness — Vizianagaram's premium strength and transformation gym. Expert trainers, world-class equipment, and a community that pushes you to be your best. Located at Boggula Dibba, Vizianagaram.",
+  keywords: [
+    "gym in Vizianagaram",
+    "One Fitness",
+    "fitness center Vizianagaram",
+    "personal training Vizianagaram",
+    "strength training",
+    "body transformation",
+    "best gym near me",
+    "Boggula Dibba gym",
+    "Andhra Pradesh gym",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "One Fitness",
+    title: "One Fitness | Premium Gym in Vizianagaram",
+    description:
+      "Transform your body at Vizianagaram's premier fitness center. Expert coaches, top equipment, and flexible plans starting at affordable rates.",
+    url: "https://onefitness-eight.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "One Fitness | Premium Gym in Vizianagaram",
+    description:
+      "Transform your body at Vizianagaram's premier fitness center. Expert coaches, top equipment, and flexible plans.",
+  },
 };
 
 export default function RootLayout({
