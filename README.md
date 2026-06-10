@@ -1,21 +1,20 @@
-# OneFitness — Gym Marketing Website
+# One Fitness — Premium Gym Website
 
-A modern, responsive gym website built with Next.js for marketing, trust-building, and lead conversion. Developed day-by-day as a structured learning project and portfolio piece.
+A modern, responsive gym website built with Next.js for One Fitness, Vizianagaram. Designed to attract prospective members, showcase facilities and trainers, and convert visitors through clear CTAs.
+
+**Live Site:** [onefitness-eight.vercel.app](https://onefitness-eight.vercel.app)
+
+---
 
 ## Overview
 
-**Project:** OneFitness  
-**Purpose:** A professional gym website designed to attract prospective members, showcase facilities and trainers, and convert visitors through clear CTAs (WhatsApp, contact forms, Google Maps).
+**Project:** One Fitness  
+**Location:** Boggula Dibba Area, Vizianagaram, Andhra Pradesh  
+**Purpose:** Professional gym website for marketing, trust-building, and lead conversion via WhatsApp, contact form, and Google Maps.
 
 **Target Audience:**
 - Prospective gym members researching local fitness options
 - Existing members looking for class info, trainer details, and updates
-
-**Core Objectives:**
-- Build a modern, mobile-first responsive website
-- Follow a day-by-day development workflow for structured learning
-- Drive conversion through WhatsApp integration, contact pages, and embedded maps
-- Showcase the gym's facilities, trainers, and member transformations
 
 ---
 
@@ -27,25 +26,10 @@ A modern, responsive gym website built with Next.js for marketing, trust-buildin
 | Language | TypeScript |
 | Styling | Tailwind CSS 4 |
 | Components | shadcn/ui |
-| Images | Next.js Image (optimized) |
+| Images | Next.js Image (optimized, lazy-loaded) |
 | Routing | Next.js Link (client-side navigation) |
-| Deployment | Vercel |
+| Deployment | Vercel (auto-deploy from GitHub) |
 | Version Control | GitHub |
-| Development Method | Day-by-day milestones |
-
----
-
-## Development Roadmap
-
-| Day | Milestone | Status | Features Completed |
-|-----|-----------|--------|-------------------|
-| Day 1 | Project Setup & Stack Selection | ✅ Done | Next.js, Tailwind, shadcn/ui configured, GitHub workflow, Vercel deployment target |
-| Day 2 | Membership Plans Page | ✅ Done | /plans route, plan cards grid, responsive layout, navigation |
-| Day 3 | Homepage Hero Branding | ✅ Done | Official logo integration, hero section with heading/subheading/CTAs, background slider placeholder structure (3-second rotation logic) |
-| Day 4 | Trainers Page | ✅ Done | /trainers route, trainer cards grid, responsive layout, TrainerCard component |
-| Day 5 | Gallery Page | ✅ Done | /gallery route, GalleryGrid component, responsive image grid, category filter, gallery data file |
-| Day 6 | Testimonials Page | ✅ Done | /testimonials route, TestimonialCard, TestimonialsList, StarRating component, testimonials data file |
-| Day 7 | Contact Page | ✅ Done | /contact route, ContactForm, ContactInfoCard, WhatsAppCTA, GoogleMapEmbed, contact data file |
 
 ---
 
@@ -53,45 +37,56 @@ A modern, responsive gym website built with Next.js for marketing, trust-buildin
 
 ### Completed
 
-- [x] Tech stack chosen (Next.js, Tailwind CSS, shadcn/ui)
-- [x] GitHub version control
-- [x] Vercel deployment target
-- [x] Day-by-day development workflow
-- [x] Reusable Navbar with logo, nav links, mobile menu, and CTA
-- [x] Reusable Footer component
-- [x] Homepage foundation (hero + branding + slider structure)
-- [x] Official logo integration (TF monogram)
-- [x] Hero background slider (3-second rotation with crossfade)
-- [x] Membership Plans page (`/plans`) with 3 plan cards
-- [x] Recommended plan highlighting
-- [x] Trainers page (`/trainers`) with 4 trainer cards
-- [x] Gallery page (`/gallery`) with responsive image grid
-- [x] Gallery category filter (All, Facility, Equipment, Members, Transformations)
-- [x] Testimonials page (`/testimonials`) with 6 member reviews
-- [x] Reusable StarRating component
-- [x] Reusable TestimonialCard and TestimonialsList components
-- [x] Contact page (`/contact`) with form, info cards, WhatsApp, and Google Maps
-- [x] Reusable ContactForm component (controlled inputs, accessible labels)
-- [x] Reusable ContactInfoCard component
-- [x] WhatsAppCTA component (click-to-chat)
-- [x] GoogleMapEmbed component (responsive iframe)
-- [x] Contact data file for centralized business info
-- [x] Placeholder system for missing assets (logo, hero images, trainer photos, gallery)
+- [x] Full responsive homepage with hero slider, sections, and CTAs
+- [x] Hero background image slider (3 real gym photos, 3-second rotation, crossfade)
+- [x] Official brand logo in navbar
+- [x] Reusable Navbar with mobile hamburger menu and active-link highlighting
+- [x] Reusable Footer with navigation links and contact info
+- [x] Membership Plans page (`/plans`) with 3 tiered plan cards
+- [x] Trainers page (`/trainers`) with 4 trainer profile cards
+- [x] Gallery page (`/gallery`) with responsive image grid and category filter
+- [x] Testimonials page (`/testimonials`) with star ratings and member reviews
+- [x] Contact page (`/contact`) with form, info cards, WhatsApp CTA, and Google Maps
+- [x] WhatsApp click-to-chat integration
+- [x] Google Maps embed (exact gym location pinned)
+- [x] Contact form with controlled inputs and accessible labels
+- [x] Reusable components: SectionHeader, StarRating, TestimonialCard, ContactInfoCard, GalleryGrid
+- [x] Site-wide SEO metadata (title, description, keywords, OpenGraph, Twitter cards)
+- [x] Page-level metadata for all routes
+- [x] Favicon and Apple touch icon from brand logo
+- [x] Skip-to-content link for accessibility
+- [x] ARIA labels, roles, and semantic HTML
 - [x] Dark premium gym aesthetic throughout
 - [x] Mobile-first responsive design on all pages
+- [x] Consistent CTA labeling and conversion paths
+- [x] MVP cleanup (no placeholder text, no dev comments in production)
 
 ### In Progress
 
-- [ ] Hero background images (placeholder structure done, real images needed)
-- [ ] Trainer photos (placeholder fallback active)
-- [ ] Gallery photos (using placehold.co temporarily)
-- [ ] Homepage sections beyond hero
+- [ ] Real trainer photos
+- [ ] Real gallery photos (using placehold.co temporarily)
+- [ ] Real testimonial member photos
 
-### Not Started
+### Future Enhancements
 
-- [ ] Favicon and metadata/SEO optimization
+- [ ] Contact form backend (email service integration)
 - [ ] Analytics integration
-- [ ] Final QA and polish
+- [ ] Blog/updates section
+- [ ] Class schedule page
+- [ ] Online booking system
+
+---
+
+## Routes
+
+| Path | Page | Description |
+|------|------|-------------|
+| `/` | Homepage | Hero slider, Why Us, Plans preview, Trainers, Testimonials, Contact CTA |
+| `/plans` | Membership Plans | 3 plan cards (Basic, Standard, Premium) with features |
+| `/trainers` | Our Trainers | 4 trainer profile cards with bio and specialization |
+| `/gallery` | Gallery | Filterable image grid (Facility, Equipment, Members, Transformations) |
+| `/testimonials` | Testimonials | 6 member reviews with star ratings |
+| `/contact` | Contact Us | Form, contact info, WhatsApp, Google Maps |
 
 ---
 
@@ -101,7 +96,9 @@ A modern, responsive gym website built with Next.js for marketing, trust-buildin
 onefitness/
 ├── app/
 │   ├── layout.tsx              # Root layout (fonts, metadata, body)
-│   ├── page.tsx                # Homepage with Hero component
+│   ├── page.tsx                # Homepage (hero + all sections)
+│   ├── icon.png                # Favicon
+│   ├── apple-icon.png          # Apple touch icon
 │   ├── plans/
 │   │   └── page.tsx            # Membership plans page
 │   ├── trainers/
@@ -116,13 +113,14 @@ onefitness/
 ├── components/
 │   ├── layout/
 │   │   ├── Navbar.tsx          # Sticky navbar with logo + mobile menu
-│   │   ├── Footer.tsx          # Site footer
+│   │   ├── Footer.tsx          # Site footer with links + contact info
 │   │   └── Hero.tsx            # Homepage hero with background slider
 │   ├── ui/
-│   │   ├── button.tsx          # shadcn Button component
-│   │   └── card.tsx            # shadcn Card component
-│   ├── GalleryGrid.tsx         # Reusable gallery image grid
-│   ├── StarRating.tsx          # Reusable star rating (1-5)
+│   │   ├── button.tsx          # shadcn Button
+│   │   └── card.tsx            # shadcn Card
+│   ├── SectionHeader.tsx       # Reusable section heading
+│   ├── StarRating.tsx          # Star rating (1-5)
+│   ├── GalleryGrid.tsx         # Gallery image grid with error fallback
 │   ├── TestimonialCard.tsx     # Single testimonial card
 │   ├── TestimonialsList.tsx    # Testimonials grid wrapper
 │   ├── ContactForm.tsx         # Contact form (controlled inputs)
@@ -130,20 +128,22 @@ onefitness/
 │   ├── WhatsAppCTA.tsx         # WhatsApp click-to-chat button
 │   └── GoogleMapEmbed.tsx      # Google Maps responsive embed
 ├── data/
-│   ├── gallery.ts              # Gallery image data array
-│   ├── testimonials.ts         # Testimonials data array
-│   └── contact.ts              # Contact/business info
+│   ├── gallery.ts              # Gallery image data
+│   ├── testimonials.ts         # Testimonials data
+│   └── contact.ts              # Business contact info
 ├── lib/
 │   └── utils.ts                # Utility functions (cn helper)
 ├── public/
 │   ├── logo/
 │   │   └── onefitness-logo.png # Official gym logo
+│   ├── hero/
+│   │   ├── hero-1.jpg          # Hero slide 1
+│   │   ├── hero-2.jpg          # Hero slide 2
+│   │   └── hero-3.jpg          # Hero slide 3
 │   └── images/
-│       ├── hero/               # Hero background images (3 needed)
-│       ├── trainers/           # Trainer photos (4 needed)
-│       └── gallery/            # Gallery photos (8 needed)
+│       ├── trainers/           # Trainer photos
+│       └── gallery/            # Gallery photos
 ├── next.config.ts
-├── tailwind.config.ts
 ├── tsconfig.json
 └── package.json
 ```
@@ -155,7 +155,7 @@ onefitness/
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -171,7 +171,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000)
 
 ### Build
 
@@ -182,29 +182,22 @@ npm start
 
 ---
 
-## Routes
+## Deployment
 
-| Path | Page | Description |
-|------|------|-------------|
-| `/` | Homepage | Hero section with branding and CTAs |
-| `/plans` | Membership | 3 plan cards (Basic, Standard, Premium) |
-| `/trainers` | Trainers | 4 trainer profile cards |
-| `/gallery` | Gallery | Filterable image grid |
-| `/testimonials` | Testimonials | Member reviews with star ratings |
-| `/contact` | Contact | Form, info cards, WhatsApp, Google Maps |
+The site auto-deploys to Vercel on every push to `main`:
+
+```
+git push → GitHub → Vercel rebuilds → Live in ~60 seconds
+```
 
 ---
 
-## Assets Needed
+## Contact
 
-To complete the site visually, add these images:
-
-| Location | Files | Purpose |
-|----------|-------|---------|
-| `public/images/hero/` | `hero-1.jpg`, `hero-2.jpg`, `hero-3.jpg` | Hero background slider |
-| `public/images/trainers/` | `trainer-1.jpg` through `trainer-4.jpg` | Trainer headshots |
-| `public/images/gallery/` | 8 photos (see `data/gallery.ts`) | Gallery grid |
-| `public/images/testimonials/` | `member-1.jpg`, `member-3.jpg`, `member-5.jpg` | Testimonial member photos |
+**One Fitness**  
+1st Floor, Four Square Apartment, RnB Junction, Boggula Dibba Rd, Vizianagaram, AP 535003  
+Phone: +91 89197 67483  
+Hours: Open until 10:00 PM
 
 ---
 
