@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
@@ -79,7 +78,6 @@ export default function TrainersPage() {
             >
               {/* Trainer image */}
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-800">
-                {/* Placeholder — replace with real image when ready */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
                   <svg
                     className="h-14 w-14 text-slate-600"
