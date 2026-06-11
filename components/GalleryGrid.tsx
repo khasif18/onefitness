@@ -26,6 +26,7 @@ function GalleryItem({ image }: { image: GalleryImage }) {
           alt={image.alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+          quality={75}
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           onError={() => setHasError(true)}
         />
