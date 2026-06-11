@@ -15,7 +15,7 @@ export default function TestimonialsPage() {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
 
-      <main className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
+      <main id="main-content" className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
         {/* Page heading */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
