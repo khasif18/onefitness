@@ -150,13 +150,18 @@ export default function PlansPage() {
               </CardContent>
 
               <CardFooter className="pt-4">
-                <Button
-                  className="w-full rounded-full"
-                  size="lg"
-                  variant={plan.recommended ? "default" : "outline"}
-                >
-                  {plan.cta}
-                </Button>
+                {plan.recommended ? (
+                  <Button className="w-full rounded-full" size="lg">
+                    {plan.cta}
+                  </Button>
+                ) : (
+                  <button
+                    type="button"
+                    className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10"
+                  >
+                    {plan.cta}
+                  </button>
+                )}
               </CardFooter>
             </Card>
           ))}
