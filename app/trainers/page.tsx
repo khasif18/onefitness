@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Our Trainers",
@@ -124,14 +123,12 @@ export default function TrainersPage() {
                 </p>
 
                 {/* CTA */}
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className="mt-4 w-full rounded-full"
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10"
                 >
-                  <Link href="/contact">Train With Me</Link>
-                </Button>
+                  Train With Me
+                </Link>
               </div>
             </div>
           ))}

@@ -195,9 +195,12 @@ export default function Home() {
         </div>
 
         <div className="mt-10 text-center">
-          <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-            <Link href="/trainers">View All Trainers</Link>
-          </Button>
+          <Link
+            href="/trainers"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10"
+          >
+            View All Trainers
+          </Link>
         </div>
       </section>
 
@@ -231,9 +234,12 @@ export default function Home() {
           </div>
 
           <div className="mt-10 text-center">
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-              <Link href="/testimonials">Read More Reviews</Link>
-            </Button>
+            <Link
+              href="/testimonials"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10"
+            >
+              Read More Reviews
+            </Link>
           </div>
         </div>
       </section>
@@ -252,9 +258,12 @@ export default function Home() {
             <Button asChild size="lg" className="w-full rounded-full px-8 sm:w-auto">
               <Link href="/contact">Get in Touch</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full rounded-full px-8 sm:w-auto">
-              <Link href="/plans">View Plans</Link>
-            </Button>
+            <Link
+              href="/plans"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10 sm:w-auto"
+            >
+              View Plans
+            </Link>
             <a
               href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(contactInfo.whatsappMessage)}`}
               target="_blank"
