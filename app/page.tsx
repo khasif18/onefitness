@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/layout/Hero";
@@ -8,6 +9,7 @@ import { StarRating } from "@/components/StarRating";
 import { SectionHeader } from "@/components/SectionHeader";
 import { contactInfo } from "@/data/contact";
 import { testimonials } from "@/data/testimonials";
+import { galleryImages } from "@/data/gallery";
 
 export const metadata: Metadata = {
   title: "One Fitness | Premium Gym in Vizianagaram",
@@ -241,6 +243,42 @@ export default function Home() {
               Read More Reviews
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ GALLERY PREVIEW ═══ */}
+      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
+        <SectionHeader
+          label="Our Space"
+          title="Inside One Fitness"
+          subtitle="Take a look at our facility, equipment, and training environment."
+        />
+
+        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {galleryImages.slice(0, 6).map((image) => (
+            <div
+              key={image.id}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-800"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={75}
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10"
+          >
+            View Full Gallery
+          </Link>
         </div>
       </section>
 
